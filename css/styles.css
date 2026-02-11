@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: 'Arial Black', Arial, sans-serif;
+    background: radial-gradient(circle at top, #111 0%, #000 60%);
+    color: #ddd;
+    text-align: center;
+}
+
+
+.hero {
+    padding: 6rem 1rem 4rem 1rem;
+    position: relative;
+}
+
+
+.hero img {
+    max-width: 600px;
+    width: 90%;
+    filter: drop-shadow(0 0 25px rgba(155, 89, 182, 0.4));
+    animation: growIn 7.0s ease-out forwards;
+}
+
+@keyframes growIn {
+    from {
+        transform: scale(0.92);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+
+.tagline {
+    color: #9b59b6;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+h2 {
+    color: #9b59b6;
+    margin-top: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+.about p,
+.shows ul {
+    opacity: 0;
+    transition: opacity 6s ease;
+}
+
+.about.active p,
+.shows.active ul {
+    opacity: 1;
+}
+
+
+
+.booking a {
+    color: #ffffff;              /* normal state = white */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.booking a:visited {
+    color: #5e2a84;              /* darker purple when visited */
+}
+
+.booking a:hover {
+    color: #9b59b6;              /* your main purple on hover */
+}
+
+
+
+
