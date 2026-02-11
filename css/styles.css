@@ -83,6 +83,83 @@ li {
     color: #9b59b6;              /* your main purple on hover */
 }
 
+/* =========================
+   MEDIA SECTION
+========================= */
+
+.media {
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.band-banner img,
+.member img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: 6px;
+
+    /* dark purple frame */
+    border: 4px solid #2c0a3d;
+}
+
+
+
+/* ===== Band Banner ===== */
+
+.band-banner {
+    margin-bottom: 2rem;
+}
+
+.band-banner img {
+    width: 100%;
+    display: block;
+    border-radius: 6px;
+    box-shadow: 0 0 40px rgba(155, 89, 182, 0.25);
+}
+
+
+/* ===== Member Grid ===== */
+
+.member-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.member {
+    width: 100%;
+}
+
+.member img {
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    display: block;
+}
+
+
+
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+    .member-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .media {
+        margin: 3rem auto;
+    }
+
+}
+
+
 
 
 
