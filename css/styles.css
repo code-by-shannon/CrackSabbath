@@ -59,13 +59,16 @@ li {
 .about p,
 .shows ul {
     opacity: 0;
-    transition: opacity 6s ease;
+    transform: translateY(20px);
+    transition: opacity 1.2s ease, transform 1.2s ease;
 }
 
 .about.active p,
 .shows.active ul {
     opacity: 1;
+    transform: translateY(0);
 }
+
 
 
 
@@ -140,6 +143,69 @@ li {
     display: block;
 }
 
+/* ===== setlist ===== */
+
+.setlist {
+    margin: 5rem auto;
+    padding: 2rem 1rem;
+    max-width: 900px;
+}
+
+/* The "paper" */
+.paper {
+    background: #f4f1e8; /* soft off-white */
+    color: #111;
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    margin: 3rem auto;
+    border-radius: 4px;
+
+    /* Slight crooked rotation */
+    transform: rotate(-2deg);
+
+    /* Depth */
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.6),
+        0 5px 10px rgba(0, 0, 0, 0.4);
+
+    position: relative;
+}
+
+/* Crumpled texture feel (subtle) */
+.paper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(0,0,0,0.05), transparent 60%),
+                radial-gradient(circle at 70% 70%, rgba(0,0,0,0.04), transparent 60%);
+    pointer-events: none;
+}
+
+/* Fake tape strips */
+.paper::after {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-3deg);
+    width: 120px;
+    height: 30px;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(2px);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+}
+
+/* Setlist text styling */
+.paper ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+}
+
 
 
 
@@ -158,6 +224,8 @@ li {
     }
 
 }
+
+
 
 
 
