@@ -1,3 +1,19 @@
+<?php
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "crack_sabbath";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,12 +66,38 @@
     
     
     <section class="shows">
-        <h2 class="toggle">upcoming shows</h2>
-        <ul>
-            <li>March 15 – The Iron Vault – Long Beach, CA</li>
-            <li>April 2 – Doom Room – Santa Ana, CA</li>
-        </ul>
-    </section>
+    <h2 class="toggle">upcoming shows</h2>
+    <ul>
+
+    <?php
+    $sql = "SELECT * FROM shows ORDER BY show_date ASC";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+        while($row = $result->fetch_assoc()) {
+
+            $formatted_date = date("F j", strtotime($row["show_date"]));
+
+            echo "<li>";
+            echo $formatted_date . " – ";
+            echo htmlspecialchars($row["venue"]) . " – ";
+            echo htmlspecialchars($row["city"]) . ", ";
+            echo htmlspecialchars($row["state"]);
+
+            if (!empty($row["map_link"])) {
+                echo " | <a href='" . htmlspecialchars($row["map_link"]) . "' target='_blank'>Map</a>";
+            }
+
+            echo "</li>";
+        }
+    } else {
+        echo "<li>No upcoming shows.</li>";
+    }
+    ?>
+
+    </ul>
+</section>
+
 
     <section class="setlist">
         <h2 class="toggle">Set List</h2>
@@ -90,8 +132,8 @@
         <h2>Booking</h2>
         <p>
             For booking inquiries:<br>
-            <a href="mailto:booking@cracksabbath.com">
-                booking@cracksabbath.com
+            <a href="mailto:Glaserbeam@aol.com">
+                booking@cracksabbath/GlaserEntertainment
             </a>
         </p>
     </section>
