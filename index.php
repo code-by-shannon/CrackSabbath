@@ -14,9 +14,9 @@
 
     <section class="about">
         <h2 class="toggle">About</h2>
-        <p>
+        <p id = 'elevator_pitch'>
             Crack Sabbath delivers the crushing riffs, haunting vocals,
-            and apocalyptic atmosphere of the early Sabbath era.
+            and apocalyptic atmosphere of <br><span>Black Sabbath</span>.
         </p>
     </section>
 
@@ -76,7 +76,7 @@
                 <li>Killing Yourself to Live</li>
                 <li>Changes</li>
                 <li>Symptom of the Universe</li>
-                <li>Shadow in the Wind</li>
+                <li>Shadow of the Wind</li>
                 <li>Zero the Hero</li>
                 <li>Wheels of Confusion</li>
             </ul>

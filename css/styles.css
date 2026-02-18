@@ -31,12 +31,26 @@ body {
     }
 }
 
-
-
 .tagline {
     color: #9b59b6;
     letter-spacing: 2px;
     margin-top: 1rem;
+    font-size: 2.2rem;
+}
+
+span{
+    font-size: 2.0rem;
+    letter-spacing: 0.05em;
+    color: #9b59b6;
+    text-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
+    opacity: 0.9;
+      
+}
+
+#elevator_pitch{
+    font-size: 1.5rem;
+    width:75%;
+    margin:auto;
 }
 
 h2 {
@@ -56,6 +70,16 @@ li {
     margin: 0.5rem 0;
 }
 
+.toggle{
+    margin-bottom:.1rem;
+}
+
+.about p {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+
 .about p,
 .shows ul {
     opacity: 0;
@@ -68,6 +92,20 @@ li {
     opacity: 1;
     transform: translateY(0);
 }
+
+.about {
+    position: relative;
+  }
+  
+  .about::before {
+    content: "";
+    display: block;
+    width: 20rem;
+    height: 1px;
+    margin: 0 auto 4rem;
+    background: rgba(155, 89, 182, 0.3);
+  }
+  
 
 
 
@@ -118,6 +156,7 @@ li {
 
 .band-banner img {
     width: 100%;
+    height: auto;           /* 👈 important */
     display: block;
     border-radius: 6px;
     box-shadow: 0 0 40px rgba(155, 89, 182, 0.25);
