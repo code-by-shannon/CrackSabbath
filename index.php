@@ -1,17 +1,5 @@
-<?php
+<?php require 'db_connect.php'; ?>
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "crack_sabbath";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-?>
 
 
 <!DOCTYPE html>
@@ -137,6 +125,13 @@ if ($conn->connect_error) {
             </a>
         </p>
     </section>
+
+    <footer style="margin-top:4rem; padding:1rem; font-size:0.8rem; opacity:0.6;">
+    <a href="login.php" style="color:#9b59b6; text-decoration:none;">
+        Admin
+    </a>
+</footer>
+
         
 <script src='js/main.js'></script>
 </body>
