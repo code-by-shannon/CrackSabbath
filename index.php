@@ -2,10 +2,16 @@
 
 
 
+<?php require 'db_connect.php'; ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    
+    <!-- 🔥 This was missing -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Crack Sabbath</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -51,6 +57,54 @@
         </div>
     
     </section>
+
+    <section class="video">
+    <h2 class="toggle">Summoning the Riffs</h2>
+
+    <div class="video-wrapper">
+        <iframe 
+            src="https://www.youtube.com/embed/WZq1r0zuTZQ" 
+            title="Crack Sabbath Live Performance"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+</section>
+
+<div class="band-bios">
+
+<div class="bio">
+    <h3><strong>Div</strong> – <span class="instrument">Lead Vocals</span></h3>
+    <p>
+      The youngest member of Crack Sabbath, Div brings fresh energy and a modern edge to the band’s classic Sabbath sound. Her vocals balance power and nuance, while her movement on stage adds dynamic spark to every performance. Outside the band, she continues developing solo projects and exploring new creative directions—new blood fueling old riffs.
+    </p>
+  </div>
+
+<div class="bio">
+    <h3><strong>Ken Glaser</strong> – <span class="instrument">Drums, Vocals</span></h3>
+    <p>
+      Raised in a deeply musical family, Ken has been immersed in music practically since birth. Self-taught on drums and guitar by age nine and forming bands soon after, he has spent decades writing, recording, and performing in tribute, cover, and original projects. Behind the kit, Ken combines experience, precision, and raw enthusiasm—driving every show with steady power and unmistakable presence.
+    </p>
+</div>
+
+<div class="bio">
+    <h3><strong>Philip Manikan</strong> – <span class="instrument">Guitar</span></h3>
+    <p>
+      Playing since 1995, Philip has built his style around heavy riffs and dark melody. Influenced by the riff-driven legacy of Black Sabbath and the unmistakable approach of Tony Iommi, he delivers thick tone, tight rhythm work, and expressive phrasing. His playing brings weight, groove, and atmosphere—anchoring the band’s sound with precision and grit.
+    </p>
+</div>
+
+<div class="bio">
+    <h3><strong>Shannon</strong> – <span class="instrument">Bass</span></h3>
+    <p>
+      Starting out in the avant-punk outfit Goddamn Sam, Shannon has spent years in crowded honky-tonks where the beer’s cold, the dance floor’s full, and the amps run hot. He’s chicken-picked from San Diego to San Francisco to the neon glow of Las Vegas, delivering high-energy sets built for two-steppers, raised glasses, and long nights. Now holding down the low end in Crack Sabbath, he moves between outlaw country and Sabbath thunder without missing a beat.
+    </p>
+</div>
+
+
+
+</div>
     
     
     <section class="shows">
@@ -120,14 +174,14 @@
         <h2>Booking</h2>
         <p>
             For booking inquiries:<br>
-            <a href="mailto:Glaserbeam@aol.com">
-                booking@cracksabbath/GlaserEntertainment
+            <a class = 'booking_anchor' href="mailto:Glaserbeam@aol.com">
+                booking@cracksabbath/<br>GlaserEntertainment
             </a>
         </p>
     </section>
 
-    <footer style="margin-top:4rem; padding:1rem; font-size:0.8rem; opacity:0.6;">
-    <a href="login.php" style="color:#9b59b6; text-decoration:none;">
+    <footer>
+    <a href="login.php">
         Admin
     </a>
 </footer>
