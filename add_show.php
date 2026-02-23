@@ -45,62 +45,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Admin - Manage Shows</title>
-    <style>
-        body { font-family: Arial; padding: 2rem; }
-        table { border-collapse: collapse; width: 100%; margin-top: 2rem; }
-        th, td { border: 1px solid #ccc; padding: 8px; text-align: left; }
-        th { background: #eee; }
-        button { padding: 6px 10px; }
-        .delete { color: red; text-decoration: none; }
-    </style>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
 
-<h2>Add New Show</h2>
+<div class="admin-wrapper">
 
-<form method="POST">
-    Date: <input type="date" name="show_date" required><br><br>
-    Event Name: <input type="text" name="event_name" required><br><br>
-    Venue: <input type="text" name="venue" required><br><br>
-    City: <input type="text" name="city" required><br><br>
-    State: <input type="text" name="state" required><br><br>
-    Map Link: <input type="text" name="map_link"><br><br>
+    <div class="admin-card">
 
-    <button type="submit">Add Show</button>
-</form>
+        <h2>Add New Show</h2>
 
-<h2>Current Shows</h2>
+        <form method="POST" class="admin-form">
+            <input type="date" name="show_date" required>
+            <input type="text" name="event_name" placeholder="Event Name" required>
+            <input type="text" name="venue" placeholder="Venue" required>
+            <input type="text" name="city" placeholder="City" required>
+            <input type="text" name="state" placeholder="State" required>
+            <input type="text" name="map_link" placeholder="Map Link (optional)">
+            <button type="submit">Add Show</button>
+        </form>
 
-<table>
-    <tr>
-        <th>Date</th>
-        <th>Event</th>
-        <th>Venue</th>
-        <th>City</th>
-        <th>State</th>
-        <th>Delete</th>
-    </tr>
+        <h2>Current Shows</h2>
 
-<?php
-
-$sql = "SELECT * FROM shows ORDER BY show_date ASC";
-$result = $conn->query($sql);
-
-while($row = $result->fetch_assoc()) {
-
-    echo "<tr>";
-    echo "<td>" . htmlspecialchars($row["show_date"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["event_name"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["venue"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["city"]) . "</td>";
-    echo "<td>" . htmlspecialchars($row["state"]) . "</td>";
-    echo "<td><a class='delete' href='?delete=" . $row["id"] . "' onclick='return confirm(\"Delete this show?\")'>Delete</a></td>";
-    echo "</tr>";
-}
-
-?>
-
-</table>
+        <div class="table-wrapper">
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <th>Event</th>
+                    <th>Venue</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Delete</th>
+                </tr>
 
 </body>
 </html>

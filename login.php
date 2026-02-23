@@ -37,18 +37,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html>
 <head>
     <title>Admin Login</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<h2>Admin Login</h2>
+<div class="login-wrapper">
+    <div class="login-card">
+        <h2>Admin Login</h2>
 
-<?php if ($error) echo "<p style='color:red;'>$error</p>"; ?>
+        <?php if ($error) echo "<p class='error'>$error</p>"; ?>
 
-<form method="POST">
-    Username: <input type="text" name="username" required><br><br>
-    Password: <input type="password" name="password" required><br><br>
-    <button type="submit">Login</button>
-</form>
+        <form method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
 
 </body>
 </html>
