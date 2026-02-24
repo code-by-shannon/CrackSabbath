@@ -36,8 +36,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Login</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin login for Crack Sabbath management panel.">
+    <title>Admin Login | Crack Sabbath</title>
+
+    <link rel="stylesheet" href="css/styles.css?v=1">
 </head>
 <body>
 

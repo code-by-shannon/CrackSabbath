@@ -44,8 +44,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin - Manage Shows</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin panel for managing Crack Sabbath shows.">
+    <title>Admin – Manage Shows | Crack Sabbath</title>
+
+    <link rel="stylesheet" href="css/styles.css?v=1">
 </head>
 
 <body>
@@ -53,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class="admin-wrapper">
 
     <div class="admin-card">
-
+    <a href="index.php" class="admin-home">← Back to Site</a>
         <h2>Add New Show</h2>
 
         <form method="POST" class="admin-form">
@@ -78,6 +82,31 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <th>State</th>
                     <th>Delete</th>
                 </tr>
+
+                <?php
+
+$sql = "SELECT * FROM shows ORDER BY show_date ASC";
+$result = $conn->query($sql);
+
+while($row = $result->fetch_assoc()) {
+
+    echo "<tr>";
+    echo "<td>" . htmlspecialchars($row["show_date"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["event_name"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["venue"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["city"]) . "</td>";
+    echo "<td>" . htmlspecialchars($row["state"]) . "</td>";
+    echo "<td><a class='delete' href='?delete=" . $row["id"] . "' onclick='return confirm(\"Delete this show?\")'>Delete</a></td>";
+    echo "</tr>";
+}
+
+?>
+
+</table>
+        </div>
+
+    </div>
+</div>
 
 </body>
 </html>

@@ -26,7 +26,7 @@
         <h2 class="toggle">About</h2>
         <p id = 'elevator_pitch'>
             Crack Sabbath delivers the crushing riffs, haunting vocals,
-            and apocalyptic atmosphere of <br><span>Black Sabbath</span>.
+            and apocalyptic atmosphere of <br><span>Black Sabbath</span>
         </p>
     </section>
 
@@ -59,7 +59,7 @@
     </section>
 
     <section class="video">
-    <h2 class="toggle">Summoning the Riffs</h2>
+    <h2 class="toggle-summon">Summoning the Riffs</h2>
 
     <div class="video-wrapper">
         <iframe 
@@ -82,14 +82,14 @@
   </div>
 
 <div class="bio">
-    <h3><strong>Ken Glaser</strong> – <span class="instrument">Drums, Vocals</span></h3>
+    <h3><strong>Ken</strong> – <span class="instrument">Drums, Vocals</span></h3>
     <p>
       Raised in a deeply musical family, Ken has been immersed in music practically since birth. Self-taught on drums and guitar by age nine and forming bands soon after, he has spent decades writing, recording, and performing in tribute, cover, and original projects. Behind the kit, Ken combines experience, precision, and raw enthusiasm—driving every show with steady power and unmistakable presence.
     </p>
 </div>
 
 <div class="bio">
-    <h3><strong>Philip Manikan</strong> – <span class="instrument">Guitar</span></h3>
+    <h3><strong>Philip</strong> – <span class="instrument">Guitar</span></h3>
     <p>
       Playing since 1995, Philip has built his style around heavy riffs and dark melody. Influenced by the riff-driven legacy of Black Sabbath and the unmistakable approach of Tony Iommi, he delivers thick tone, tight rhythm work, and expressive phrasing. His playing brings weight, groove, and atmosphere—anchoring the band’s sound with precision and grit.
     </p>
@@ -98,12 +98,9 @@
 <div class="bio">
     <h3><strong>Shannon</strong> – <span class="instrument">Bass</span></h3>
     <p>
-      Starting out in the avant-punk outfit Goddamn Sam, Shannon has spent years in crowded honky-tonks where the beer’s cold, the dance floor’s full, and the amps run hot. He’s chicken-picked from San Diego to San Francisco to the neon glow of Las Vegas, delivering high-energy sets built for two-steppers, raised glasses, and long nights. Now holding down the low end in Crack Sabbath, he moves between outlaw country and Sabbath thunder without missing a beat.
+      Starting out in the avant-punk outfit Goddam Sam, Shannon has spent years in crowded honky-tonks where the beer’s cold, the dance floor’s full, and the amps run hot. He’s chicken-picked from San Diego to San Francisco to the neon glow of Las Vegas, delivering high-energy sets built for two-steppers, raised glasses, and long nights. Now holding down the low end in Crack Sabbath, he moves between outlaw country and Sabbath thunder without missing a beat.
     </p>
 </div>
-
-
-
 </div>
     
     

@@ -39,7 +39,7 @@ body {
 }
 
 span{
-    font-size: 2.0rem;
+    font-size: 3rem;
     letter-spacing: 0.05em;
     color: #9b59b6;
     text-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
@@ -61,7 +61,6 @@ h2 {
     
 }
 
-
 ul {
     list-style: none;
     padding: 0;
@@ -72,7 +71,8 @@ li {
 }
 
 .toggle{
-    margin-bottom:.1rem;
+
+    font-size: 2rem;
 }
 
 .about p {
@@ -98,7 +98,8 @@ li {
     position: relative;
   }
   
-  .about::before {
+  .about::before,
+  .video::before {
     content: "";
     display: block;
     width: 20rem;
@@ -107,10 +108,6 @@ li {
     background: rgba(155, 89, 182, 0.3);
   }
   
-
-
-
-
 .booking a {
     color: #ffffff;              /* normal state = white */
     text-decoration: none;
@@ -141,8 +138,6 @@ li {
     height: auto;
     display: block;
 }
-
-
 
 /* ===== Band Banner ===== */
 
@@ -262,16 +257,21 @@ footer a {
 =========================
 */
 
+.toggle-summon{
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
 .video {
     text-align: center;
-    padding: 40px 20px;
+    padding: 0px 20px;
 }
 
 .video-wrapper {
     position: relative;
     width: 95%;
     max-width: 1100px; /* bigger */
-    margin: 40px auto;
+    margin: 0 auto;
     padding-bottom: 56.25%;
     height: 0;
 }
@@ -317,11 +317,11 @@ footer a {
   }
   
   .instrument {
-    font-size: 0.95rem;     /* smaller than name */
     font-weight: 600;
     text-transform: uppercase;
     opacity: 0.8;
     margin-left: 6px;
+    font-size: 1.5rem;
   }
   
   .bio p {
@@ -329,62 +329,6 @@ footer a {
     line-height: 1.7;
     margin-top: 10px;
   }
-
-.instrument {
-    color: #a855f7; /* or your purple accent */
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-
-/* =========================
-   MOBILE – TEXT ONLY
-========================= */
-
-@media (max-width: 768px) {
-
-    body {
-        font-size: 1.2rem;
-    }
-
-    .tagline {
-        font-size: 2rem;
-    }
-
-    #elevator_pitch {
-        font-size: 1.7rem;
-    }
-
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    .shows li,
-    .booking p {
-        font-size: 1.4rem;
-    }
-
-   .booking_anchor{
-    width: 50%;
-   }
-
-   footer {
-    padding: 2rem 1rem 4rem; /* extra bottom space for thumb room */
-}
-
-footer a {
-    font-size: 1.2rem;       /* bigger text */
-    display: inline-block;
-    padding: 0.75rem 1rem;   /* bigger tap target */
-}
-
-.band-bios {
-    margin: 50px 16px;      /* breathing room from edges */
-    padding: 40px 20px;     /* reduce side padding */
-    border-radius: 1.5rem;  /* less cartoonishly round */
-}
-}
 
 /* =========================
    ADMIN LOGIN
@@ -566,6 +510,95 @@ tr:nth-child(even) {
 .admin-form input[type="date"]::-webkit-calendar-picker-indicator {
     filter: invert(1);
     cursor: pointer;
+}
+
+.admin-home {
+    display: inline-block;
+    margin-bottom: 30px;
+    color: #9b59b6;
+    text-decoration: none;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.admin-home:hover {
+    opacity: 1;
+}
+
+
+
+/* =========================
+   MOBILE – TEXT ONLY
+========================= */
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 1.2rem;
+    }
+
+    .tagline {
+        font-size: 2rem;
+    }
+
+    #elevator_pitch {
+        font-size: 1.7rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .shows li,
+    .booking p {
+        font-size: 1.4rem;
+    }
+
+   .booking_anchor{
+    width: 50%;
+   }
+
+   footer {
+    padding: 2rem 1rem 4rem; /* extra bottom space for thumb room */
+    }
+
+    footer a {
+    font-size: 1.2rem;       /* bigger text */
+    display: inline-block;
+    padding: 0.75rem 1rem;   /* bigger tap target */
+    }
+
+    .band-bios {
+    margin: 50px 16px;      /* breathing room from edges */
+    padding: 40px 20px;     /* reduce side padding */
+    border-radius: 1.5rem;  /* less cartoonishly round */
+    }
+
+    /* login.php */
+    .login-card {
+    width: 90%;
+    max-width: 700px;   /* was 450px */
+    padding: 80px 60px; /* bigger breathing room */
+    background: #0e0e0e;
+    border-radius: 16px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+    border: 1px solid rgba(155, 89, 182, 0.4);
+    text-align: center;
+    }
+
+    .login-card h2 {
+    font-size: 2.2rem;
+    }
+
+    .login-card input {
+    font-size: 1.3rem;
+    padding: 20px;
+    }
+
+    .login-card button {
+    font-size: 1.3rem;
+    padding: 20px;
+    }
 }
 
 
