@@ -1,3 +1,7 @@
+*{
+    
+}
+
 body {
     margin: 0;
     font-family: 'Arial Black', Arial, sans-serif;
@@ -6,12 +10,39 @@ body {
     text-align: center;
 }
 
+h2 {
+    color: #9b59b6;
+    margin-top: 3rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    
+}
 
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 0.5rem 0;
+}
+
+span{
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    color: #9b59b6;
+    text-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
+    opacity: 0.9;
+}
+
+
+/* ===================== 
+    HERO TITLE and IMAGE 
+========================*/
 .hero {
     padding: 6rem 1rem 4rem 1rem;
     position: relative;
 }
-
 
 .hero img {
     max-width: 600px;
@@ -38,14 +69,11 @@ body {
     font-size: 2.2rem;
 }
 
-span{
-    font-size: 3rem;
-    letter-spacing: 0.05em;
-    color: #9b59b6;
-    text-shadow: 0 0 8px rgba(155, 89, 182, 0.4);
-    opacity: 0.9;
-      
-}
+/* 
+========================
+ABOUT and ELEVATOR PITCH
+===========================
+*/
 
 #elevator_pitch{
     font-size: 1.5rem;
@@ -53,34 +81,15 @@ span{
     margin:auto;
 }
 
-h2 {
-    color: #9b59b6;
-    margin-top: 3rem;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-}
-
-li {
-    margin: 0.5rem 0;
-}
-
 .toggle{
-
     font-size: 2rem;
 }
 
 .about p {
     max-width: 700px;
     margin: 0 auto;
-  }
+}
   
-
 .about p,
 .shows ul {
     opacity: 0;
@@ -98,33 +107,21 @@ li {
     position: relative;
   }
   
-  .about::before,
-  .video::before {
+.about::before,
+.video::before {
     content: "";
     display: block;
     width: 20rem;
     height: 1px;
     margin: 0 auto 4rem;
     background: rgba(155, 89, 182, 0.3);
-  }
-  
-.booking a {
-    color: #ffffff;              /* normal state = white */
-    text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.booking a:visited {
-    color: #5e2a84;              /* darker purple when visited */
-}
-
-.booking a:hover {
-    color: #9b59b6;              /* your main purple on hover */
-}
-
-/* =========================
-   MEDIA SECTION
-========================= */
+/* 
+===================================
+MEDIA: Band Banner and Members Grid
+===================================== 
+*/
 
 .media {
     max-width: 1100px;
@@ -139,22 +136,17 @@ li {
     display: block;
 }
 
-/* ===== Band Banner ===== */
-
 .band-banner {
     margin-bottom: 2rem;
 }
 
 .band-banner img {
     width: 100%;
-    height: auto;           /* 👈 important */
+    height: auto;          
     display: block;
     border-radius: 6px;
     box-shadow: 0 0 40px rgba(155, 89, 182, 0.25);
 }
-
-
-/* ===== Member Grid ===== */
 
 .member-grid {
     display: grid;
@@ -172,9 +164,111 @@ li {
     object-fit: cover;
 }
 
-/* ===== setlist ===== */
+/*
+=========================
+    VIDEO
+=========================
+*/
 
-.setlist {
+.toggle-summon{
+    margin-bottom: 10px;
+    font-size: 2rem;
+}
+
+.video-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+
+    width:50%;
+    margin:auto;
+}
+
+.video-card{
+    width:40%;
+}
+
+.video-card iframe{
+    width:100%;
+    aspect-ratio: 16/9;
+}
+
+/*
+=========================
+BAND BIO
+=========================
+*/
+
+.band-bios {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 60px 40px;
+    background: #11011b;
+    border: 2px solid #46066e;
+    border-radius: 8px;
+    color:floralwhite;
+    border-radius:4rem;
+  }
+  
+  .bio {
+    margin-bottom: 60px;
+  }
+  
+  .bio h3 {
+    font-size: 1.6rem;     /* larger name */
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .bio strong {
+    font-size: 1.6rem;      /* ensure name is big */
+  }
+  
+  .instrument {
+    font-weight: 600;
+    text-transform: uppercase;
+    opacity: 0.8;
+    margin-left: 6px;
+    font-size: 1.5rem;
+  }
+  
+  .bio p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-top: 10px;
+  }
+
+  /*
+  ===============
+        SHOWS
+  ===============
+  */
+
+.show-ozzy-pic-div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+  } 
+
+.ozzy{
+    width:120px;
+    height:120px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 1px;
+}
+
+  /*
+  ====================
+        SET LIST
+  ====================
+  */
+
+  .setlist {
     margin: 5rem auto;
     padding: 2rem 1rem;
     max-width: 900px;
@@ -235,9 +329,31 @@ li {
     letter-spacing: 1px;
 }
 
-/* =========================
-   FOOTER – GLOBAL
-========================= */
+/*
+============
+BOOKING
+============
+*/
+
+.booking a {
+    color: #ffffff;              
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.booking a:visited {
+    color: #5e2a84;              
+}
+
+.booking a:hover {
+    color: #9b59b6;              
+}
+
+/*
+==========
+FOOTER
+==========
+*/
 
 footer {
     margin-top: 4rem;
@@ -251,88 +367,13 @@ footer a {
     font-size: 0.9rem;
 }
 
-/*
-=========================
-    VIDEO
-=========================
-*/
 
-.toggle-summon{
-    margin-bottom: 10px;
-    font-size: 2rem;
-}
-
-.video {
-    text-align: center;
-    padding: 0px 20px;
-}
-
-.video-wrapper {
-    position: relative;
-    width: 95%;
-    max-width: 1100px; /* bigger */
-    margin: 0 auto;
-    padding-bottom: 56.25%;
-    height: 0;
-}
-
-.video-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
 
 /* 
-=============================
-        BIO
-=============================
-*/
-
-.band-bios {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 60px 40px;
-    background: #11011b;
-    border: 2px solid #46066e;
-    border-radius: 8px;
-    color:floralwhite;
-    border-radius:4rem;
-  }
-  
-  .bio {
-    margin-bottom: 60px;
-  }
-  
-  .bio h3 {
-    font-size: 1.6rem;     /* larger name */
-    font-weight: 700;
-    margin-bottom: 10px;
-    letter-spacing: 1px;
-  }
-  
-  .bio strong {
-    font-size: 1.6rem;      /* ensure name is big */
-  }
-  
-  .instrument {
-    font-weight: 600;
-    text-transform: uppercase;
-    opacity: 0.8;
-    margin-left: 6px;
-    font-size: 1.5rem;
-  }
-  
-  .bio p {
-    font-size: 1.05rem;
-    line-height: 1.7;
-    margin-top: 10px;
-  }
-
-/* =========================
+=========================
    ADMIN LOGIN
-========================= */
+========================= 
+*/
 
 .login-wrapper {
     min-height: 100vh;
@@ -400,9 +441,11 @@ footer a {
     margin-bottom: 20px;
 }
 
-/* =========================
+/* 
+=========================
    ADMIN PANEL
-========================= */
+========================= 
+*/
 
 .admin-wrapper {
     min-height: 100vh;

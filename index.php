@@ -1,27 +1,22 @@
 <?php require 'db_connect.php'; ?>
 
-
-
-<?php require 'db_connect.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    
-    <!-- 🔥 This was missing -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Crack Sabbath</title>
+    <title>Black Sabbath</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
+<!-- HERO TITLE and IMAGE -->    
     <section class="hero">
         <img src="imgs/crack_logo.png" alt="Crack Sabbath Logo">
         <p class="tagline">A Black Sabbath Tribute Experience</p>
     </section>
 
+<!--  About and Elevator Pitch -->
     <section class="about">
         <h2 class="toggle">About</h2>
         <p id = 'elevator_pitch'>
@@ -30,48 +25,55 @@
         </p>
     </section>
 
+<!-- MEDIA: Band Banner and Members Grid -->
     <section class="media">
-
-        <!-- Full Band Banner -->
+    <!-- Full Band Banner -->
         <div class="band-banner">
             <img src="imgs/band_shot.png" alt="Crack Sabbath Full Band">
         </div>
-    
-        <!-- 2x2 Member Grid -->
+    <!-- 2x2 Member Grid -->
         <div class="member-grid">
-            <div class="member">
-                <img src="imgs/div.png" alt="Guitarist">
-            </div>
-    
-            <div class="member">
-                <img src="imgs/phillip.png" alt="Drummer">
-            </div>
-    
-            <div class="member">
-                <img src="imgs/ken.png" alt="Vocalist">
-            </div>
-    
-            <div class="member">
-                <img src="imgs/shannon.png" alt="Bassist">
-            </div>
+            <!-- Phillip -->
+            <div class="member"><img src="imgs/div.png" alt="Guitarist"></div>
+            <!-- Ken -->
+            <div class="member"><img src="imgs/phillip.png" alt="Drummer"></div>
+            <!-- Div -->
+            <div class="member"><img src="imgs/ken.png" alt="Vocalist"></div>
+            <!-- Shannon -->
+            <div class="member"><img src="imgs/shannon.png" alt="Bassist"></div>
         </div>
-    
     </section>
 
-    <section class="video">
-    <h2 class="toggle-summon">Summoning the Riffs</h2>
+<!-- VIDEO -->
+<section class="video">
+    <h2 class="toggle-summon">Crack Sabbath Live!</h2>
 
     <div class="video-wrapper">
-        <iframe 
-            src="https://www.youtube.com/embed/WZq1r0zuTZQ" 
-            title="Crack Sabbath Live Performance"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-        </iframe>
+        <!-- Crack Sabbath Highlights Video -->
+        <div class="video-card">
+            <h3>Crack Sabbath Highlights</h3>
+            <iframe src="https://www.youtube.com/embed/SmhspeLFxaI?si=yYWs6mTrR24z4mxa" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <!-- Never Say Die Video -->
+        <div class="video-card">
+        <h3>Never Say Die</h3>
+        <iframe src="https://www.youtube.com/embed/hn71iRmeDAc?si=C0h-LFirASTJcXnF" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- Iron Man Video -->
+        <div class="video-card">
+        <h3>Iron Man</h3>
+        <iframe src="https://www.youtube.com/embed/N_bzFon7rw4?si=QN07PlCsDVdlo8NB" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <!-- Children of the Grave Video -->
+        <div class="video-card">
+        <h3>Children of the Grave</h3>
+        <iframe src="https://www.youtube.com/embed/Bl6w6cUmoHQ?si=JJD_Bk_Z-eb72GA-" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
     </div>
 </section>
 
+<!-- BAND BIO -->
 <div class="band-bios">
 
 <div class="bio">
@@ -103,9 +105,13 @@
 </div>
 </div>
     
-    
-    <section class="shows">
-    <h2 class="toggle">upcoming shows</h2>
+<!-- SHOWS -->    
+<section class="shows">
+    <div class='show-ozzy-pic-div'>
+    <img class="ozzy" src="imgs/ozzy.png" alt="ozzy">
+        <h2 class="toggle">upcoming shows</h2>
+    </div>
+
     <ul>
 
     <?php
@@ -137,7 +143,7 @@
     </ul>
 </section>
 
-
+<!-- SETLIST -->
     <section class="setlist">
         <h2 class="toggle">Set List</h2>
     
@@ -163,10 +169,8 @@
             </ul>
         </div>
     </section>
-    
-    
 
-    
+<!-- BOOKING -->
     <section class="booking">
         <h2>Booking</h2>
         <p>
@@ -177,6 +181,8 @@
         </p>
     </section>
 
+    
+<!-- FOOTER -->    
     <footer>
     <a href="login.php">
         Admin
